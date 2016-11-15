@@ -14,35 +14,304 @@
         font-weight: normal;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      /* Basic theme for remark slides */
+
+* {
+    .box-sizing(border-box);
+}
+*:before,
+*:after {
+    .box-sizing(border-box);
+}
+
+html {
+    font-size: 100%;
+    font-family: "Droid Serif";
+}
+
+body {
+    margin: 0;
+    font-family: "Droid Serif";
+    font-size: 34px;
+    line-height: 1.5;
+    color: #555555;
+    background-color: #FFFFFF;
+}
+
+a {
+    color: #00989e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover, a:focus {
+    color: #00989e;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 3px solid #00989e;
+    outline-offset: 0;
+    background-color: #00989e;
+    color: #FFF;
+    text-decoration: none;
+}
+
+ol {
+    padding: 0 0 0 1.5em;
+    margin: 1em 0;
+}
+
+ul {
+    margin: 1em 0;
+    padding: 0 0 0 1em;
+}
+
+img {
+    vertical-align: middle;
+    max-height: 600px;
+    margin: 0 auto 1em;
+    display: block;
+}
+
+hr {
+    height: 0;
+    margin: 1em 0;
+    border: 0;
+    border-top: 1px solid #cccccc;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 500;
+    margin: 1em 0 0.5em;
+}
+
+b,
+strong {
+    font-weight: 500;
+}
+
+blockquote {
+    border-left: 5px solid #cccccc;
+    padding-left: 1em;
+    margin: 1em -1em;
+    font-style: italic;
+    color: #999999;
+}
+
+.remark-slide-number {
+    display: none;
+}
+
+.remark-slide {
+    display: table;
+}
+
+.remark-slide-content {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 4em;
+    font-size: 34px;
+}
+
+.remark-slide-content h1 {
+    font-size: 56px;
+    color: #00989e;
+}
+
+.remark-slide-content h2 {
+    font-size: 48px;
+    color: #00989e;
+}
+
+.remark-slide-content h3 {
+    font-size: 40px;
+    color: #00989e;
+}
+
+.remark-slide-content h4 {
+    font-size: 36px;
+    color: #00989e;
+}
+
+.remark-slide-content h5 {
+    font-size: 30px;
+    color: #00989e;
+}
+
+.remark-slide-content h6 {
+    font-size: 24px;
+    color: #00989e;
+}
+
+.remark-slide-content > :first-child {
+    margin-top: 0;
+}
+
+.remark-slide-content > :last-child {
+    margin-bottom: 0;
+}
+
+.remark-code-line {
+    white-space: pre-wrap;
+    background-color: #fff;
+    border: 3px solid #834;
+    color: #000;
+    padding: 0 0em;
+    font-size: 24px;
+}
     </style>
   </head>
   <body>
     <textarea id="source">
-
 class: center, middle
+<!--
+!Here is where the actual presentation starts!
+-->
 
-<img src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png">
+<img src="pictures/github-logo.png">
 # For Historians
-<img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png">
+<img src="pictures/octocat.png">
 ---
 class: center, middle
 
-<img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png">
+<img src="pictures/octocat.png">
 
 ---
-background-image: url(./panorama.png)
-name: Bob
-# Agenda {{ name }}
+class: center, middle
+
+<img src="pictures/raw-code.png">
+
+---
+        
+<img src="pictures/colored-code.png">
+---
+
+## Logical Gates 
+<img src="pictures/symtab.gif">
+        
+---
+name: code
+class: left, top
+# So what's this 'code' you speak of?
 
 ---
 
-# Introduction
+template:code
+## Ruby         
+<img src="pictures/ruby.png">
+        
+---
+template:code
+## Inform7         
+<img src="pictures/inform7.png">
+        
+---
+template:code
+## Brainfuck         
+<img src="pictures/brainfuck.png">
+        
+---
+template:code
+
+1. Ask user for to input her name and store it in [name]
+2. Count the number of letters in the name and store it in [count]
+3. print "Hello, [name], did you know you have [count] letters in you name?"
+--
+        
+4. if [count]<3 print "Oh my, [name], did someone tell you have a very short name?"
+---
+class:top,left
+                
+```python
+    name = input()
+    count = len(name)
+    print("Hello, ",name,"did you know you have ",count," letters in your name?")
+    if count>3:
+            print("Oh my,"[name]," did someone tell you have a very short name?")
+```
+---
+class:center
+        
+#Open Source Software
+        
+<img src="pictures/open-source-logo.png">
+
+---
+class:center,middle
+#So what's **GIT**?
+
+<img src="pictures/git-logo.png">
+---
+class:top
+        
+#Version control
+<img src="pictures/bad-version-control.png">
+        
+---
+class:left,top
+        
+# Version Control
+  + _Track_ developments and changes in your documents
+  + _Record_ the changes you made to your document in a way that you will be able to understand later
+  + _Experiment_ with different versions of a document while maintaining the original version
+  + _‘Merge’_ two versions of a document and manage conflicts between versions
+  + ___Revert___ changes, moving ‘backwards’ through your history to previous versions of your document
+---
+class:top,left
+        
+#GitHub
+<img style="width:120%;height:120%;" src="pictures/github-homepage.png">
+
+---        
+---
+        
+# Key Terms
+  - Repository
+<!--    A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs.-->
+  - Branch
+<!--    Branching is the way to work on different versions of a repository at one time.-->
+  - Master
+<!--
+    By default your repository has one branch named master which is considered to be the definitive branch. We use branches to experiment and make edits before committing them to master.
+    When you create a branch off the master branch, you’re making a copy, or snapshot, of master as it was at that point in time. If someone else made changes to the master branch while you were working on your branch, you could pull in those updates.
+-->
+  - Commit <!--    On GitHub, saved changes are called commits-->
+    - Commit Request
+<!--       Each commit has an associated commit message, which is a description explaining why a particular change was made.-->
+  - Pull
+    - Pull Request
+<!--      Pull Requests are the heart of collaboration on GitHub. When you open a pull request, you’re proposing your changes and requesting that someone review and pull in your contribution and merge them into their branch.-->
+  - Diffs
+<!--    Differences - Pull requests show diffs, or differences, of the content from both branches. The changes, additions, and subtractions are shown in green and red.-->
+
+---
+background-image: url(panorama.jpg)
+
+# Some links
+
+[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
+        
+[You can use numbers for reference-style link definitions][1]
+        
+[1]: http://slashdot.org
+---
+        
+#Basic _Remark.js_ syntax
+
+## Quotes
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
         
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
     <script>
-      var slideshow = remark.create();
+      var slideshow = remark.create({navigation: {scroll:false, }});
     </script>
   </body>
 </html>
